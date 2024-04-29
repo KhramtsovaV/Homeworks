@@ -5,7 +5,7 @@ public class QA27_1_3_2_2_False_Khramtsova {
         double a = 12.7;
         double c = 399.5;
         double x = c - a - 10;
-        double MAX_X = 75;
+        final double MAX_X = 75;
         boolean isXLessOrEqualThanMaxX = x <= MAX_X;
         System.out.println("Значение a= " + a);
         System.out.println("Значение c= " + c);
