@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c2aeb37-2e28-47c1-9fcd-37da707daf6b" name="Changes" comment="Homework lesson1">
-      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_1_Khramtsova.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_1b_Khramtsova.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_1c_Khamtsova.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_2_Khamtsova.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_3_Khamtsova.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_4_Khamtsova.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_5_Khamtsova.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_6_Khamtsova.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_7_Khamtsova.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_8_Khamtsova.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_9_Khamtsova.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/homework2/QA27_2_1_Khramtsova.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework2/QA27_2_1a_Khramtsova.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +31,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -57,6 +68,17 @@
     "Application.QA27_1_3_2_True_Khramtsova.executor": "Run",
     "Application.QA27_1_3_Khramtsova.executor": "Run",
     "Application.QA27_2_1_Khramtsova.executor": "Run",
+    "Application.QA27_2_1a_Khramtsova.executor": "Run",
+    "Application.QA27_2_1b_Khramtsova.executor": "Run",
+    "Application.QA27_2_1c_Khamtsova.executor": "Run",
+    "Application.QA27_2_2_Khamtsova.executor": "Run",
+    "Application.QA27_2_3_Khamtsova.executor": "Run",
+    "Application.QA27_2_4_Khamtsova.executor": "Run",
+    "Application.QA27_2_5_Khamtsova.executor": "Run",
+    "Application.QA27_2_6_Khamtsova.executor": "Run",
+    "Application.QA27_2_7_Khamtsova.executor": "Run",
+    "Application.QA27_2_8_Khamtsova.executor": "Run",
+    "Application.QA27_2_9_Khamtsova.executor": "Run",
     "Application.lesson1.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -95,7 +117,7 @@
       <workItem from="1714332819122" duration="2541000" />
       <workItem from="1714419712638" duration="68000" />
       <workItem from="1714419809244" duration="13000" />
-      <workItem from="1714932465460" duration="1469000" />
+      <workItem from="1714932465460" duration="9507000" />
     </task>
     <task id="LOCAL-00001" summary="Homework lesson1">
       <option name="closed" value="true" />
@@ -145,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714374238934</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Homework lesson1">
+      <option name="closed" value="true" />
+      <created>1714934061648</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714934061648</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

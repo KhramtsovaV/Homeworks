@@ -1,0 +1,543 @@
+Index: src/homework2/QA27_2_3_Khamtsova.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/homework2/QA27_2_3_Khamtsova.java b/src/homework2/QA27_2_3_Khamtsova.java
+new file mode 100644
+--- /dev/null	(date 1714937885652)
++++ b/src/homework2/QA27_2_3_Khamtsova.java	(date 1714937885652)
+@@ -0,0 +1,11 @@
++package homework2;
++//При помощи цикла for вывести на экран нечетные числа от 1 до 99.
++//При решении используйте операцию инкремента (++).
++public class QA27_2_3_Khamtsova {
++    public static void main(String[] args) {
++        for (int i = 1; i <= 99; i++) {
++            if (i % 2 != 0) { System.out.println(i);}
++
++        }
++    }
++}
+Index: src/homework2/QA27_2_2_Khamtsova.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/homework2/QA27_2_2_Khamtsova.java b/src/homework2/QA27_2_2_Khamtsova.java
+new file mode 100644
+--- /dev/null	(date 1714937062451)
++++ b/src/homework2/QA27_2_2_Khamtsova.java	(date 1714937062451)
+@@ -0,0 +1,32 @@
++package homework2;
++//Для введенного числа t (температура на улице) вывести
++//Если t>–5, то вывести «Тепло».
++//Если –5>= t > –20, то вывести «Нормально».
++//Если –20>= t, то вывести «Холодно».
++//* Рекомендую использовать константы для чисел
++
++import java.util.Scanner;
++
++public class QA27_2_2_Khamtsova {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        System.out.print("Enter temperature: ");
++        double temperature = scanner.nextDouble();
++
++        boolean hot = temperature > -5.0;
++        boolean normal = temperature >= -5.0 && temperature <= 20.0;
++        boolean cold = temperature >= -20.0;
++
++        String weather;
++
++
++        if (hot) {
++            weather = "hot";
++        } else if (normal) {
++            weather = "normal";
++        }else weather = "cold";
++
++        System.out.println("Today weather is " + weather);
++
++    }
++}
+Index: src/homework2/QA27_2_5_Khamtsova.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/homework2/QA27_2_5_Khamtsova.java b/src/homework2/QA27_2_5_Khamtsova.java
+new file mode 100644
+--- /dev/null	(date 1714938983518)
++++ b/src/homework2/QA27_2_5_Khamtsova.java	(date 1714938983518)
+@@ -0,0 +1,27 @@
++package homework2;
++//Напишите программу, где пользователь вводит любое целое
++//положительное число. А программа суммирует все числа от 1 до
++//введенного пользователем числа.
++
++import java.util.Scanner;
++
++public class QA27_2_5_Khamtsova {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        System.out.println("Enter a positive number: ");
++        int number = scanner.nextInt();
++
++        if (number < 1) {
++            System.out.println("The number " + number + " is less than 1.");
++        } else if (number >= 1) {
++            int sum = 0;
++
++            for (int i = 0; i <= number; i++) {
++                sum += i;
++            }
++            System.out.println("The sum of all numbers from 1 to  " + number + " is: " + sum);
++        }
++
++        scanner.close();
++    }
++}
+\ No newline at end of file
+Index: src/homework2/QA27_2_4_Khamtsova.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/homework2/QA27_2_4_Khamtsova.java b/src/homework2/QA27_2_4_Khamtsova.java
+new file mode 100644
+--- /dev/null	(date 1714938411146)
++++ b/src/homework2/QA27_2_4_Khamtsova.java	(date 1714938411146)
+@@ -0,0 +1,11 @@
++package homework2;
++//Необходимо вывести на экран числа от 5 до 1.
++//При решении используйте операцию декремента (--).
++
++public class QA27_2_4_Khamtsova {
++    public static void main(String[] args) {
++        for (int i = 5; i >= 1; i--) {
++            System.out.println(i);
++        }
++    }
++}
+Index: src/homework2/QA27_2_1_Khramtsova.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/homework2/QA27_2_1_Khramtsova.java b/src/homework2/QA27_2_1a_Khramtsova.java
+rename from src/homework2/QA27_2_1_Khramtsova.java
+rename to src/homework2/QA27_2_1a_Khramtsova.java
+--- a/src/homework2/QA27_2_1_Khramtsova.java	(revision 0fdb166eb2b9ae7ad6e89cc975590fd3a2c400a2)
++++ b/src/homework2/QA27_2_1a_Khramtsova.java	(date 1714935337682)
+@@ -2,53 +2,37 @@
+ 
+ import java.util.Scanner;
+ 
+-public class QA27_2_1_Khramtsova {
++public class QA27_2_1a_Khramtsova {
+     public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+         System.out.print("Enter number of month:");
+-        int months = scanner.nextInt();
+-String monthString;
++        int month = scanner.nextInt();
++String seasonString;
+ 
+-        switch (months) {
++        switch (month) {
++            case 12:
+             case 1:
+-                monthString = "January";
+-                 break;
+             case 2:
+-                monthString =  "February";
+-                break;
++                seasonString = "Winter";
++                 break;
+             case 3:
+-                monthString = "March";
+-                break;
+             case 4:
+-                monthString = "April";
+-                break;
+             case 5:
+-                monthString = "May";
++                seasonString =  "Spring";
+                 break;
+             case 6:
+-                monthString =  "June";
+-                break;
+             case 7:
+-                monthString =  "July";
+-                break;
+             case 8:
+-                monthString = "August";
++                seasonString = "Summer";
+                 break;
+             case 9:
+-                monthString =  "September";
+-                break;
+             case 10:
+-                monthString = "October";
+-                break;
+             case 11:
+-                monthString = "November";
++                seasonString = "Autumn";
+                 break;
+-            case 12:
+-                monthString =  "December";
+-                break;
+-            default: monthString = "Try again";
++            default: seasonString = "Try again";
+             break;
+         }
+-        System.out.println(monthString);
++        System.out.println(seasonString);
+     }
+ }
+Index: src/homework2/QA27_2_7_Khamtsova.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/homework2/QA27_2_7_Khamtsova.java b/src/homework2/QA27_2_7_Khamtsova.java
+new file mode 100644
+--- /dev/null	(date 1714940219401)
++++ b/src/homework2/QA27_2_7_Khamtsova.java	(date 1714940219401)
+@@ -0,0 +1,48 @@
++package homework2;
++//Пользователь вводит целое положительное n, ему на консоль выводятся первые n членов последовательности Фибоначчи. Написать используя как for, так и while. Обеспечить повторный ввод пользователем (чтобы вводил и получал данные, пока ему не надоест)
++//* п-ть Фибоначчи - числовая последовательность, начинающаяся с двух единиц, где каждое последующее число равно сумме двух предыдущих: 1 1 2 3 5 8 13 21 ...
++import java.util.Scanner;
++public class QA27_2_7_Khamtsova {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        char choice;
++
++        do {
++            System.out.print("Enter a positive integer n: ");
++            int n = scanner.nextInt();
++
++            if (n <= 0) {
++                System.out.println("Error: number must be positive.");
++            } else {
++                System.out.println("First " + n + " members of the Fibonacci sequence:");
++                for (int i = 1; i <= n; i++) {
++                    System.out.print(fibonacci(i) + " ");
++                }
++                System.out.println();
++            }
++
++            System.out.print("Do you want to continue? (y/n): ");
++            choice = scanner.next().charAt(0);
++        } while (choice == 'y');
++        if (choice == 'n') {
++            System.out.print("Thank you for using Fibonacci sequence.");
++        }
++
++        scanner.close();
++    }
++    public static int fibonacci(int n) {
++        if (n == 1 || n == 2) {
++            return 1;
++        } else {
++            int a = 1, b = 1, c = 0;
++            for (int i = 3; i <= n; i++) {
++                c = a + b;
++                a = b;
++                b = c;
++            }
++            return c;
++        }
++    }
++
++
++}
+Index: src/homework2/QA27_2_6_Khamtsova.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/homework2/QA27_2_6_Khamtsova.java b/src/homework2/QA27_2_6_Khamtsova.java
+new file mode 100644
+--- /dev/null	(date 1714939552606)
++++ b/src/homework2/QA27_2_6_Khamtsova.java	(date 1714939552606)
+@@ -0,0 +1,36 @@
++package homework2;
++//Пользователь вводит первое число, вводит шаг, вводит max/min значение. Необходимо, чтоб программа выводила на экран последовательность
++//Пример: первое число 2, шаг 4, критическое значение 11
++//Вывод: 2 6 10
++//Пример 2: первое число 1, шаг -5, критическое значение -17
++//Вывод: 1 -4 -9 -14
++//* Желательно использовать проверки на корректность введенных данных, чтобы цикл не вышел бесконечным
++import java.util.Scanner;
++
++public class QA27_2_6_Khamtsova {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++
++        System.out.print("Enter first number: ");
++        int firstNumber = scanner.nextInt();
++
++        System.out.print("Enter step: ");
++        int step = scanner.nextInt();
++
++        System.out.print("Enter critical value: ");
++        int criticalValue = scanner.nextInt();
++
++        // Проверка на корректность введенных данных
++        if ((step > 0 && criticalValue < firstNumber) || (step < 0 && criticalValue > firstNumber)) {
++            System.out.println("Error: Critical value is not in sequence.");
++        } else {
++            int currentNumber = firstNumber;
++            while ((step > 0 && currentNumber <= criticalValue) || (step < 0 && currentNumber >= criticalValue)) {
++                System.out.print(currentNumber + " ");
++                currentNumber += step;
++            }
++        }
++
++        scanner.close();
++    }
++    }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"2c2aeb37-2e28-47c1-9fcd-37da707daf6b\" name=\"Changes\" comment=\"Homework lesson1\">\n      <change afterPath=\"$PROJECT_DIR$/src/homework2/QA27_2_1_Khramtsova.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;KhramtsovaV&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/KhramtsovaV/Homeworks&quot;,\n    &quot;accountId&quot;: &quot;a32c3b75-2137-4a46-86cf-074e1636ff9b&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 5\n}</component>\n  <component name=\"ProjectId\" id=\"2fjoZGuZsWds1Hj7WSFtWNpx9yl\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\n    \"Application.QA27_1_1_Khramtsova.executor\": \"Run\",\n    \"Application.QA27_1_2_Khramtsova.executor\": \"Run\",\n    \"Application.QA27_1_3_1_Khramtsova.executor\": \"Run\",\n    \"Application.QA27_1_3_2_1_True_Khramtsova.executor\": \"Run\",\n    \"Application.QA27_1_3_2_2_False_Khramtsova.executor\": \"Run\",\n    \"Application.QA27_1_3_2_True_Khramtsova.executor\": \"Run\",\n    \"Application.QA27_1_3_Khramtsova.executor\": \"Run\",\n    \"Application.QA27_2_1_Khramtsova.executor\": \"Run\",\n    \"Application.lesson1.executor\": \"Run\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"deletionFromPopupRequiresConfirmation\": \"false\",\n    \"git-widget-placeholder\": \"main\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"onboarding.tips.debug.path\": \"/Users/valeriyakhramtsova/Desktop/Java/homeworks/Homeworks_TMS/src/Main.java\",\n    \"settings.editor.selected.configurable\": \"org.jetbrains.plugins.github.ui.GithubSettingsConfigurable\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240\" />\n        <option value=\"bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"2c2aeb37-2e28-47c1-9fcd-37da707daf6b\" name=\"Changes\" comment=\"\" />\n      <created>1714323901561</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1714323901561</updated>\n      <workItem from=\"1714323902877\" duration=\"87000\" />\n      <workItem from=\"1714324345654\" duration=\"6339000\" />\n      <workItem from=\"1714332079187\" duration=\"638000\" />\n      <workItem from=\"1714332819122\" duration=\"2541000\" />\n      <workItem from=\"1714419712638\" duration=\"68000\" />\n      <workItem from=\"1714419809244\" duration=\"13000\" />\n      <workItem from=\"1714932465460\" duration=\"1469000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Homework lesson1\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1714330407947</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1714330407947</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Homework lesson1\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1714333075261</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1714333075261</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Homework lesson1\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1714333687740</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1714333687740</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Homework lesson1\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1714333786233</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1714333786233</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Homework lesson1\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1714333796867</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1714333796867</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Homework lesson1\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1714374238934</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1714374238934</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"7\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Homework lesson1\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Homework lesson1\" />\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0fdb166eb2b9ae7ad6e89cc975590fd3a2c400a2)
++++ b/.idea/workspace.xml	(date 1714981579439)
+@@ -5,8 +5,18 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="2c2aeb37-2e28-47c1-9fcd-37da707daf6b" name="Changes" comment="Homework lesson1">
+-      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_1_Khramtsova.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_1b_Khramtsova.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_1c_Khamtsova.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_2_Khamtsova.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_3_Khamtsova.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_4_Khamtsova.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_5_Khamtsova.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_6_Khamtsova.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_7_Khamtsova.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_8_Khamtsova.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/homework2/QA27_2_9_Khamtsova.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/homework2/QA27_2_1_Khramtsova.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework2/QA27_2_1a_Khramtsova.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -21,6 +31,7 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="PUSH_AUTO_UPDATE" value="true" />
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GitHubPullRequestSearchHistory">{
+@@ -57,6 +68,17 @@
+     "Application.QA27_1_3_2_True_Khramtsova.executor": "Run",
+     "Application.QA27_1_3_Khramtsova.executor": "Run",
+     "Application.QA27_2_1_Khramtsova.executor": "Run",
++    "Application.QA27_2_1a_Khramtsova.executor": "Run",
++    "Application.QA27_2_1b_Khramtsova.executor": "Run",
++    "Application.QA27_2_1c_Khamtsova.executor": "Run",
++    "Application.QA27_2_2_Khamtsova.executor": "Run",
++    "Application.QA27_2_3_Khamtsova.executor": "Run",
++    "Application.QA27_2_4_Khamtsova.executor": "Run",
++    "Application.QA27_2_5_Khamtsova.executor": "Run",
++    "Application.QA27_2_6_Khamtsova.executor": "Run",
++    "Application.QA27_2_7_Khamtsova.executor": "Run",
++    "Application.QA27_2_8_Khamtsova.executor": "Run",
++    "Application.QA27_2_9_Khamtsova.executor": "Run",
+     "Application.lesson1.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+@@ -95,7 +117,7 @@
+       <workItem from="1714332819122" duration="2541000" />
+       <workItem from="1714419712638" duration="68000" />
+       <workItem from="1714419809244" duration="13000" />
+-      <workItem from="1714932465460" duration="1469000" />
++      <workItem from="1714932465460" duration="9507000" />
+     </task>
+     <task id="LOCAL-00001" summary="Homework lesson1">
+       <option name="closed" value="true" />
+@@ -145,7 +167,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1714374238934</updated>
+     </task>
+-    <option name="localTasksCounter" value="7" />
++    <task id="LOCAL-00007" summary="Homework lesson1">
++      <option name="closed" value="true" />
++      <created>1714934061648</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1714934061648</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+Index: src/homework2/QA27_2_9_Khamtsova.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/homework2/QA27_2_9_Khamtsova.java b/src/homework2/QA27_2_9_Khamtsova.java
+new file mode 100644
+--- /dev/null	(date 1714941992161)
++++ b/src/homework2/QA27_2_9_Khamtsova.java	(date 1714941992161)
+@@ -0,0 +1,21 @@
++package homework2;
++//Вывести на консоль таблицу умножения.
++// Использовать System.out.print(...) , куда выводить в том числе пробелы между числами
++public class QA27_2_9_Khamtsova {
++    public static void main(String[] args) {
++        for (int i = 1; i <= 10; i++) {
++            for (int j = 1; j <= 10; j++) {
++
++                int result = i * j;
++                System.out.print(result + " ");
++
++
++                if (result < 10) {
++                    System.out.print(" ");
++                }
++            }
++
++            System.out.println();
++        }
++    }
++}
+Index: src/homework2/QA27_2_8_Khamtsova.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/homework2/QA27_2_8_Khamtsova.java b/src/homework2/QA27_2_8_Khamtsova.java
+new file mode 100644
+--- /dev/null	(date 1714941501180)
++++ b/src/homework2/QA27_2_8_Khamtsova.java	(date 1714941501180)
+@@ -0,0 +1,33 @@
++package homework2;
++/*а каждый месяц банк начисляет к сумме вклада 7% от суммы.
++Напишите программу, в которую пользователь вводит сумму вклада и
++количество месяцев. А банк вычисляет конечную сумму вклада с учетом
++начисления процентов за каждый месяц.
++Способ 1: использовать for
++Способ 2: использовать математику
++* большим плюсом будет хранение валюты и ее
++расчеты в целых числах. Можете использовать как 1, т
++ак и 2 переменные, сумму можно вводить отдельно для долларов/центов (рублей/копеек),
++выводить ее желательно слитно через точку.
++ */
++
++import java.util.Scanner;
++public class QA27_2_8_Khamtsova {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++
++        System.out.print("Enter a deposit amount: ");
++        double depositAmount = scanner.nextDouble();
++
++        System.out.print("Enter a count of months: ");
++        int months = scanner.nextInt();
++
++        for (int i = 0; i < months; i++) {
++            depositAmount += depositAmount * 0.07;
++        }
++
++        System.out.printf("Final deposit amount in " +months + " months: " + depositAmount);
++
++        scanner.close();
++    }
++}
+Index: src/homework2/QA27_2_1c_Khamtsova.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/homework2/QA27_2_1c_Khamtsova.java b/src/homework2/QA27_2_1c_Khamtsova.java
+new file mode 100644
+--- /dev/null	(date 1714936178480)
++++ b/src/homework2/QA27_2_1c_Khamtsova.java	(date 1714936178480)
+@@ -0,0 +1,28 @@
++package homework2;
++
++public class QA27_2_1c_Khamtsova {
++    public static void main(String[] args) {
++            for (int i = 1; i <= 6; i++) {
++                switch (i) {
++                    case 1:
++                        System.out.println("Month " + i + ": January");
++                        break;
++                    case 2:
++                        System.out.println("Month " + i + ": February");
++                        break;
++                    case 3:
++                        System.out.println("Month " + i + ": March");
++                        break;
++                    case 4:
++                        System.out.println("Month " + i + ": April");
++                        break;
++                    case 5:
++                        System.out.println("Month " + i + ": May");
++                        break;
++                    case 6:
++                        System.out.println("Month " + i + ": June");
++                        break;
++                }
++            }
++        }
++    }
+Index: src/homework2/QA27_2_1b_Khramtsova.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/homework2/QA27_2_1b_Khramtsova.java b/src/homework2/QA27_2_1b_Khramtsova.java
+new file mode 100644
+--- /dev/null	(date 1714935343519)
++++ b/src/homework2/QA27_2_1b_Khramtsova.java	(date 1714935343519)
+@@ -0,0 +1,37 @@
++package homework2;
++
++import java.util.Scanner;
++
++public class QA27_2_1b_Khramtsova {
++    public static void main(String[] args) {
++        Scanner scanner = new Scanner(System.in);
++        System.out.print("Enter number of month:");
++        int month = scanner.nextInt();
++        String season;
++
++
++        boolean winter = month >= 12 || month <= 2;
++        boolean spring = month >= 3 && month <= 5;
++        boolean summer = month >= 6 && month <= 8;
++
++
++        if (winter) {
++            season = "winter";
++        } else {
++            if (spring) {
++                season = "spring";
++            } else {
++                if (summer) {
++                    season = "summer";
++                } else {
++                    season = "autumn";
++                }
++            }
++        }
++
++        System.out.println("Number of month " + month + " is " + season);
++
++        scanner.close();
++    }
++}
++

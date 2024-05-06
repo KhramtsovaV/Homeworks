@@ -1,4 +1,4 @@
-package lesson1;
+package homework1;
 
 public class QA27_1_2_Khramtsova {
     public static void main(String[] args) {
