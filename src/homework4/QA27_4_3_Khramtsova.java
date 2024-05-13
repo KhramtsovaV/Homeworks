@@ -14,9 +14,21 @@ public class QA27_4_3_Khramtsova {
             }
             System.out.println();
         }
+        System.out.println("main diagonal" + " ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i][i] + " ");
+        }
+        System.out.println();
 
+        // Вывод побочной диагонали
+        System.out.println("incidental diagonal:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i][array.length - 1 - i] + " ");
+        }
+        System.out.println();
+    }
     }
 
-    }
+
 
 
