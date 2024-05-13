@@ -28,13 +28,16 @@ public class QA27_3_1_Khramtsova {
         System.out.print("Enter number to delete: ");
         int needToDelete = scanner.nextInt();
 
-        //int[] newArray = removeElementFromArray(array, needToDelete);
-
-        //System.out.println("Array after deletion:");
-       // for (int num : newArray) {
-        //    System.out.print(num + " ");
+        int[] result = new int [array.length - needToDelete];
+        int index = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != needToDelete) {
+                result[index] = array[i];
+                index++;
+            }
         }
 
-       // scanner.close();
+                scanner.close();
     }
+}
 
