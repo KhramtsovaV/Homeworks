@@ -1,20 +1,35 @@
 package homework9;
-
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int n = 10;
+        try {
+            int n = getArraySizeFromUser();
+            Animal[] animals = generateRandomAnimals(n);
 
-        Animal[] animals = generateRandomAnimals(n);
+            printAnimals(animals);
 
-        printAnimals(animals);
+            flyAll(animals);
+            voiceAll(animals);
+            eatAll(animals);
 
-        flyAll(animals);
-        voiceAll(animals);
-        eatAll(animals);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 
+    private static int getArraySizeFromUser() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter array size: ");
+        int size = scanner.nextInt();
+
+        if (size <= 0) {
+            throw new IllegalArgumentException("array size must be positive ");
+        }
+
+        return size;
+    }
 
     private static Animal[] generateRandomAnimals(int n) {
         Random random = new Random();
@@ -56,10 +71,40 @@ public class Main {
     private static void printAnimals(Animal[] animals) {
         System.out.println("All animals:");
         for (Animal animal : animals) {
-            System.out.println();
+            System.out.println(animal);
         }
 
         System.out.println();
+    }
+
+    private static int getUserChoice() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Choose action:");
+        System.out.println("1. Fly");
+        System.out.println("2. Voice");
+        System.out.println("3. Eat");
+        System.out.print("Your choice: ");
+        int choice = scanner.nextInt();
+
+        if (choice < 1 || choice > 3) {
+            throw new IllegalArgumentException("Error, try again");
+        }
+
+        return choice;
+    }
+
+    private static void performAction(int choice, Animal[] animals) {
+        switch (choice) {
+            case 1:
+                flyAll(animals);
+                break;
+            case 2:
+                voiceAll(animals);
+                break;
+            case 3:
+                eatAll(animals);
+                break;
+        }
     }
 
     private static void flyAll(Animal[] animals) {
@@ -73,7 +118,7 @@ public class Main {
     }
 
     private static void voiceAll(Animal[] animals) {
-        System.out.println("voice");
+        System.out.println("Voice:");
 
         for (Animal animal : animals) {
             animal.voice();
@@ -82,9 +127,8 @@ public class Main {
         System.out.println();
     }
 
-
     private static void eatAll(Animal[] animals) {
-        System.out.println("eat");
+        System.out.println("Eat:");
 
         for (Animal animal : animals) {
             animal.eat();
